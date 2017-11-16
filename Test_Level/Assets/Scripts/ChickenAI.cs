@@ -14,7 +14,7 @@ public class ChickenAI : MonoBehaviour {
 	void OnTriggerStay(Collider other)
 	{
 		if(other.gameObject.name == "Player"){
-			Debug.Log("Player has entered chickens trigger");
+			//Debug.Log("Player has entered chickens trigger");
 			transform.LookAt(target);
 			transform.Translate(Vector3.back*moveSpeed*Time.deltaTime);
 			
