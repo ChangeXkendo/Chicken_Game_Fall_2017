@@ -7,11 +7,12 @@ public class ScoreManager : MonoBehaviour {
 
 	public static int score;
 	public Text text;
+	public int scoreAmount = score;
 
 	// Use this for initialization
 	void Start () {
 		text = GetComponent<Text>();
-		score = 0;
+			score = 0;
 		
 	}
 	
