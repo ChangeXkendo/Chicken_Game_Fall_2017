@@ -6,7 +6,7 @@ public class wolfHealth : MonoBehaviour {
 	public int currentHealth;
 	public int maxHealth = 3;
 	public Transform spawnPoint;
-	public int points;
+	public int points = 5;
 
 	void Start(){
 		currentHealth = maxHealth;
@@ -25,7 +25,18 @@ public class wolfHealth : MonoBehaviour {
 			transform.rotation = spawnPoint.rotation;
 			//Reset Wolf Health
 			currentHealth = maxHealth;
+
 		} 
+		if(currentHealth <= 0){
+			 if(currentHealth <= 0){
+            /*Destroy(gomaObgject); */
+            ScoreManager.AddPoints(points);
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
+
+		}
+		
 	}
 
+	}
 }

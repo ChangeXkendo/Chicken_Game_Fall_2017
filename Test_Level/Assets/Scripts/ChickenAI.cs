@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class ChickenAI : MonoBehaviour {
 	public Rigidbody enemy;
-	public float moveSpeed;
+	private float moveSpeed = 6f;
 	public Transform target;
 	public Transform chickenPen;
-	public float wanderingRadius;
-	public float wanderingTimer;
 	private float timer;
+	public int points = 10;
 
 	void OnTriggerStay(Collider other)
 	{
@@ -20,23 +19,20 @@ public class ChickenAI : MonoBehaviour {
 			
 			}
 
-		
 	}
-	
-	void OnCollisionEnter(Collision other)
-	{
-		if(other.gameObject.name =="Player"){
-			/*Destroy(gameobject); */
-			//scoreManager.AddPoints(points);
-			transform.position = chickenPen.position;
-			transform.rotation = chickenPen.rotation;
-		}
-		
-	}
+
+        
+    
+
+    void OnCollisionEnter(Collision other){
+        if(other.gameObject.name == "Player"){
+            /*Destroy(gomaObgject); */
+            ScoreManager.AddPoints(points);
+            transform.position = chickenPen.position;
+            transform.rotation = chickenPen.rotation;
+
+
+        }
+    }
 
 }
-
-	
-		
-	
-
