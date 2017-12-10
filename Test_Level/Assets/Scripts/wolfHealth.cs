@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class wolfHealth : MonoBehaviour {
 	public int currentHealth;
-	public int maxHealth = 3;
+	public int maxHealth = 5;
 	public Transform spawnPoint;
 	public int points = 5;
 
@@ -23,20 +23,14 @@ public class wolfHealth : MonoBehaviour {
 			//Move Wolf to Spawn piont for restart
 			transform.position = spawnPoint.position;
 			transform.rotation = spawnPoint.rotation;
-			//Reset Wolf Health
-			currentHealth = maxHealth;
-
-		} 
-		if(currentHealth <= 0){
-			 if(currentHealth <= 0){
-            /*Destroy(gomaObgject); */
-            ScoreManager.AddPoints(points);
-            transform.position = spawnPoint.position;
-            transform.rotation = spawnPoint.rotation;
+            //Reset Wolf Health
+            currentHealth = maxHealth;
+			//currentHealth = maxHealth;
+           
 
 		}
+       
 		
 	}
 
 	}
-}

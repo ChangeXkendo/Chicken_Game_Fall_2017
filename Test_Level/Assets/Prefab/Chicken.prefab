@@ -25,7 +25,8 @@ GameObject:
   - component: {fileID: 65705018329837520}
   - component: {fileID: 54124733824321286}
   - component: {fileID: 114391093079337174}
-  - component: {fileID: 114316532322922160}
+  - component: {fileID: 135204509785163710}
+  - component: {fileID: 114346398985271680}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -39,8 +40,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1282354854593028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.1, y: 4.96, z: -35.04}
+  m_LocalRotation: {x: -0.026862893, y: 0.39930123, z: 0.011705537, w: 0.91635144}
+  m_LocalPosition: {x: -27.679432, y: 4.8429856, z: 20.407312}
   m_LocalScale: {x: 1.2399197, y: 1.1525708, z: 1.0198729}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,7 +100,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &65374791728798762
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -120,22 +121,23 @@ BoxCollider:
   m_GameObject: {fileID: 1282354854593028}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 50, y: 1, z: 50}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114316532322922160
+--- !u!114 &114346398985271680
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1282354854593028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d19aa8360b822c409d4f3e6aa7a86cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
+  ready: 1
 --- !u!114 &114391093079337174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +152,18 @@ MonoBehaviour:
   enemy: {fileID: 0}
   target: {fileID: 0}
   chickenPen: {fileID: 0}
-  wanderingRadius: 0
-  wanderingTimer: 0
   points: 10
+  chicken: {fileID: 1282354854593028}
+  withinBounds: 0
+--- !u!135 &135204509785163710
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282354854593028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 30
+  m_Center: {x: 0, y: 0, z: 0}

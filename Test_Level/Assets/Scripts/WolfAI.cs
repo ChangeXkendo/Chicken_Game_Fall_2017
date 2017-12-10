@@ -25,7 +25,7 @@ public class WolfAI : MonoBehaviour {
 	
 		if(other.gameObject.name == "Player"){
 		var hit = other.gameObject;
-		var health = hit.GetComponent<playerHealth>();
+		//var health = hit.GetComponent<playerHealth>();
 		print("Wolf is attacking!");
 
 		if(pcHealth != null){

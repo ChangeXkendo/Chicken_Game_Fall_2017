@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -86,7 +86,8 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 1aa7f41d11385854a909913e89c19101,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -135,9 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4555ff34cdbbc458d83c7e18883bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 10
+  currentHealth: 100
   hp: {fileID: 770147794}
   maxHP: {fileID: 63969470}
+  player: {fileID: 273571356}
 --- !u!4 &9061934
 Transform:
   m_ObjectHideFlags: 0
@@ -228,7 +230,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 26313829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -81.38, y: 29, z: 136.4}
+  m_LocalPosition: {x: -81.38, y: 24.7, z: 136.4}
   m_LocalScale: {x: 16.591906, y: 24.117237, z: 13.486767}
   m_Children: []
   m_Father: {fileID: 0}
@@ -244,7 +246,6 @@ GameObject:
   - component: {fileID: 63969468}
   - component: {fileID: 63969471}
   - component: {fileID: 63969470}
-  - component: {fileID: 63969469}
   m_Layer: 5
   m_Name: MaxHP
   m_TagString: Untagged
@@ -267,23 +268,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1292, y: 430}
+  m_AnchoredPosition: {x: 1293, y: 426}
   m_SizeDelta: {x: 161.5, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &63969469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 63969467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca4555ff34cdbbc458d83c7e18883bbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 100
-  hp: {fileID: 770147794}
-  maxHP: {fileID: 63969470}
 --- !u!114 &63969470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +312,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63969467}
+--- !u!1 &72062466 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282354854593028, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1559578883}
 --- !u!1 &80030664 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1301134382316584, guid: a08eb49fe9df9de41a96527f68ee270a,
@@ -348,6 +340,11 @@ Rigidbody:
   m_PrefabParentObject: {fileID: 54434888487558102, guid: a08eb49fe9df9de41a96527f68ee270a,
     type: 2}
   m_PrefabInternal: {fileID: 1264378929}
+--- !u!1 &84767855 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282354854593028, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 794212980}
 --- !u!1 &96278225
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,11 +504,44 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110603355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -97.8, y: 24.8, z: 125.8}
+  m_LocalPosition: {x: -97.8, y: 20.7, z: 125.8}
   m_LocalScale: {x: 19.060785, y: 19.060787, z: 19.060787}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &208161758 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282354854593028, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 361452870}
+--- !u!1 &258788820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 258788821}
+  m_Layer: 0
+  m_Name: WolfSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258788821
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258788820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 290.5, y: 11.3, z: 293.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273571356
 GameObject:
@@ -544,9 +574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb798bbaeda2d945b9603fb9af9c7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
+  moveSpeed: 35
   turnSpeed: 180
-  jumpHeight: 50
+  jumpHeight: 10
 --- !u!23 &273571358
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -627,8 +657,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!1 &277355732
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +834,11 @@ Prefab:
       propertyPath: m_Name
       value: Chicken (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+        type: 2}
+      propertyPath: chicken
+      value: 
+      objectReference: {fileID: 208161758}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d10debfcfb4a3e4885c1c3c7646b12f, type: 2}
   m_IsPrefabParent: 0
@@ -940,11 +975,6 @@ Prefab:
       objectReference: {fileID: 273571361}
     - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
         type: 2}
-      propertyPath: target2
-      value: 
-      objectReference: {fileID: 1873433269}
-    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
-        type: 2}
       propertyPath: chickenPen
       value: 
       objectReference: {fileID: 283626494}
@@ -952,9 +982,19 @@ Prefab:
       propertyPath: m_Name
       value: Chicken (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+        type: 2}
+      propertyPath: chicken
+      value: 
+      objectReference: {fileID: 1005412162}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d10debfcfb4a3e4885c1c3c7646b12f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &584493111 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282354854593028, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2004526274}
 --- !u!1 &724278712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1087,6 @@ GameObject:
   - component: {fileID: 770147792}
   - component: {fileID: 770147795}
   - component: {fileID: 770147794}
-  - component: {fileID: 770147793}
   m_Layer: 5
   m_Name: CurrentHP
   m_TagString: Untagged
@@ -1073,20 +1112,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1199, y: 426}
   m_SizeDelta: {x: 185.7, y: 60.6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &770147793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 770147791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca4555ff34cdbbc458d83c7e18883bbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 100
-  hp: {fileID: 770147794}
-  maxHP: {fileID: 63969470}
 --- !u!114 &770147794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,6 +1211,11 @@ Prefab:
       propertyPath: m_Name
       value: Chicken (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+        type: 2}
+      propertyPath: chicken
+      value: 
+      objectReference: {fileID: 84767855}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d10debfcfb4a3e4885c1c3c7646b12f, type: 2}
   m_IsPrefabParent: 0
@@ -1231,7 +1261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 80030666}
   shootPoint: {fileID: 798913585}
-  shootSpeed: 150
+  shootSpeed: 500
 --- !u!1 &811347906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1586,11 @@ Prefab:
       propertyPath: m_Name
       value: Chicken (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+        type: 2}
+      propertyPath: chicken
+      value: 
+      objectReference: {fileID: 1823353031}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d10debfcfb4a3e4885c1c3c7646b12f, type: 2}
   m_IsPrefabParent: 0
@@ -1587,6 +1622,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &985300495 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282354854593028, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1665043824}
+--- !u!1 &1005412162 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282354854593028, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 536688598}
 --- !u!1 &1038015056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,7 +1887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1255, y: 430}
+  m_AnchoredPosition: {x: 1254, y: 424}
   m_SizeDelta: {x: 161.9, y: 60.6}
   m_Pivot: {x: 0.48730147, y: 0.5}
 --- !u!114 &1106018422
@@ -2007,15 +2052,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4531291024240454, guid: a08eb49fe9df9de41a96527f68ee270a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.22032478
+      value: 0.3685149
       objectReference: {fileID: 0}
     - target: {fileID: 4531291024240454, guid: a08eb49fe9df9de41a96527f68ee270a, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.19539817
+      value: 0.32682213
       objectReference: {fileID: 0}
     - target: {fileID: 4531291024240454, guid: a08eb49fe9df9de41a96527f68ee270a, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.23834977
+      value: 1.9075791
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a08eb49fe9df9de41a96527f68ee270a, type: 2}
@@ -2234,6 +2279,11 @@ Prefab:
       propertyPath: m_Name
       value: Chicken (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+        type: 2}
+      propertyPath: chicken
+      value: 
+      objectReference: {fileID: 1571689054}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d10debfcfb4a3e4885c1c3c7646b12f, type: 2}
   m_IsPrefabParent: 0
@@ -2318,7 +2368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1514711866}
   winText: {fileID: 1996122510}
-  winScore: 100
+  winScore: 50
 --- !u!114 &1514711866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2423,9 +2473,19 @@ Prefab:
       propertyPath: m_Name
       value: Chicken (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+        type: 2}
+      propertyPath: chicken
+      value: 
+      objectReference: {fileID: 72062466}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d10debfcfb4a3e4885c1c3c7646b12f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1571689054 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282354854593028, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1495092485}
 --- !u!1 &1574638697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,9 +2631,19 @@ Prefab:
       propertyPath: m_Name
       value: Chicken (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+        type: 2}
+      propertyPath: chicken
+      value: 
+      objectReference: {fileID: 985300495}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d10debfcfb4a3e4885c1c3c7646b12f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1823353031 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1282354854593028, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+    type: 2}
+  m_PrefabInternal: {fileID: 940894179}
 --- !u!1 &1873433265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2659,7 @@ GameObject:
   - component: {fileID: 1873433270}
   - component: {fileID: 1873433272}
   - component: {fileID: 1873433273}
+  - component: {fileID: 1873433274}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -2700,9 +2771,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 273571361}
   moveSpeed: 10
-  damage: 10
+  damage: 100
   pcHealth: {fileID: 9061932}
 --- !u!114 &1873433273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1873433265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a6e617afeb314e8e12c9d86ffb8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 5
+  spawnPoint: {fileID: 258788821}
+  points: 5
+--- !u!114 &1873433274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2713,7 +2799,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d19aa8360b822c409d4f3e6aa7a86cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 15
+  ready: 0
 --- !u!1 &1920213268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,11 +3016,15 @@ Prefab:
       propertyPath: chickenPen
       value: 
       objectReference: {fileID: 283626494}
-    - target: {fileID: 114316532322922160, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: moveSpeed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114391093079337174, guid: 1d10debfcfb4a3e4885c1c3c7646b12f,
+        type: 2}
+      propertyPath: chicken
+      value: 
+      objectReference: {fileID: 584493111}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d10debfcfb4a3e4885c1c3c7646b12f, type: 2}
   m_IsPrefabParent: 0
