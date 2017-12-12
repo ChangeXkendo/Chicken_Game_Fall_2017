@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb798bbaeda2d945b9603fb9af9c7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 35
+  moveSpeed: 40
   turnSpeed: 180
   jumpHeight: 10
 --- !u!23 &273571358
@@ -2052,15 +2052,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4531291024240454, guid: a08eb49fe9df9de41a96527f68ee270a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.3685149
+      value: 0.45479977
       objectReference: {fileID: 0}
     - target: {fileID: 4531291024240454, guid: a08eb49fe9df9de41a96527f68ee270a, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.32682213
+      value: 0.403345
       objectReference: {fileID: 0}
     - target: {fileID: 4531291024240454, guid: a08eb49fe9df9de41a96527f68ee270a, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.9075791
+      value: 0.49014392
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a08eb49fe9df9de41a96527f68ee270a, type: 2}
@@ -2771,7 +2771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 273571361}
   moveSpeed: 10
-  damage: 100
+  damage: 10
   pcHealth: {fileID: 9061932}
 --- !u!114 &1873433273
 MonoBehaviour:

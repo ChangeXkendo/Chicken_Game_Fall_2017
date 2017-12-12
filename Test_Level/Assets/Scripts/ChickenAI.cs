@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChickenAI : MonoBehaviour
 {
     public Rigidbody enemy;
-    private float moveSpeed = 20f;
+    private float moveSpeed = 33f;
     public Transform target;
     public Transform chickenPen;
     private float timer;
